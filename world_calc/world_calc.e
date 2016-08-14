@@ -299,27 +299,35 @@ feature -- IMPLEMENTACION
 			l_int_math: INTEGER_MATH
 		do
 			if not retried then
+
 				if not txt_formula.text.equals ({SYSTEM_STRING}.empty) then
 						-- parse the formula and get the arguments
+
 					create my_parse.make
 					l_args := my_parse.parse (txt_formula.text)
-					create l_int_math.make
-					txt_formula.set_text (l_int_math.get_result (
-						{SYSTEM_CONVERT}.to_int_32 (l_args.arg_1),
-						l_args.op, {SYSTEM_CONVERT}.to_int_32 (l_args.arg_2)))
+
+					if not {SYSTEM_CONVERT}.to_string(l_args.arg_2).equals("0") then
+						create l_int_math.make
+						txt_formula.set_text (l_int_math.get_result (
+							{SYSTEM_CONVERT}.to_int_32 (l_args.arg_1),
+							l_args.op, {SYSTEM_CONVERT}.to_int_32 (l_args.arg_2)))
+
+
+					else
+					end
+
 				end
+
 				if txt_formula.text.equals ({SYSTEM_STRING}.empty) then
 					res := {WINFORMS_MESSAGE_BOX}.show (
 					"POR FAVOR INGRESE DATOS %N%N")
-
 				end
-			else
-				res := {WINFORMS_MESSAGE_BOX}.show (
-					"POR FAVOR INGRESE DATOS %N%N")
-
-			end
-		rescue
-			retried := True
+		end
+		rescue 
+			retried := true
+			res := {WINFORMS_MESSAGE_BOX}.show (
+			"ERROR DE FORMATO %N%N")
+			txt_formula.set_text("")
 			retry
 		end
 

@@ -41,10 +41,10 @@ COMMAND_MAKEFILE =
 START_TEST = $start_test 
 END_TEST = $end_test 
 CREATE_TEST = $create_test 
-SYSTEM_IN_DYNAMIC_LIB = world_calc$shared_suffix 
-IL_SYSTEM = libworld_calc$shared_suffix
-IL_OBJECTS = libworld_calc.$obj_file_ext
-IL_RESOURCE = world_calc
+SYSTEM_IN_DYNAMIC_LIB = calcu_eiffel$shared_suffix 
+IL_SYSTEM = libcalcu_eiffel$shared_suffix
+IL_OBJECTS = libcalcu_eiffel.$obj_file_ext
+IL_RESOURCE = calcu_eiffel
 !GROK!THIS!
 $spitshell >>Makefile <<'!NO!SUBS!'
 

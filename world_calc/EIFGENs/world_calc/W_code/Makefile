@@ -29,10 +29,10 @@ START_TEST = if [ ! -f finished ] ; then
 END_TEST = ; fi 
 CREATE_TEST = "C:\Program Files\Eiffel Software\EiffelStudio 16.05 GPL/gcc/win64/msys/1.0/bin/touch" finished
 PATH := C:\Program Files\Eiffel Software\EiffelStudio 16.05 GPL/gcc/win64/mingw/libexec/gcc/mingw32/3.4.2;C:\Windows\Microsoft.NET\Framework64\v4.0.30319;C:\Program Files\Haskell\bin;C:\Program Files\Haskell Platform\8.0.1\lib\extralibs\bin;C:\Program Files\Haskell Platform\8.0.1\bin;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Skype\Phone\;C:\Program Files (x86)\scala\bin;C:\Program Files\Haskell Platform\8.0.1\mingw\bin;C:\Users\ariel\AppData\Roaming\cabal\bin;C:\Users\ariel\AppData\Roaming\local\bin;C:\Users\ariel\AppData\Local\atom\bin 
-SYSTEM_IN_DYNAMIC_LIB = world_calc.dll 
-IL_SYSTEM = libworld_calc.dll
-IL_OBJECTS = libworld_calc.o
-IL_RESOURCE = world_calc
+SYSTEM_IN_DYNAMIC_LIB = calcu_eiffel.dll 
+IL_SYSTEM = libcalcu_eiffel.dll
+IL_OBJECTS = libcalcu_eiffel.o
+IL_RESOURCE = calcu_eiffel
 
 .SUFFIXES:.cpp .o 
 
