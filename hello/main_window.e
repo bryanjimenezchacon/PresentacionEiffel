@@ -1,8 +1,7 @@
 note
-	legal: "See notice at end of class."
-	status: "See notice at end of class."
+
 class
-	MAIN_WINDOW
+	PANTALLAPRINCIPAL
 
 inherit
 	WEL_FRAME_WINDOW
@@ -14,39 +13,28 @@ inherit
 create
 	make
 
-feature -- Initialization
+feature -- Inicio
 
 	make
-			-- Make the main window
+			-- Crea la ventana
 		do
 			make_top ("Presentacion Eiffel")
 		end
 
-feature {NONE} -- Implementation
+feature {NONE} -- Implementacion
 
 	on_paint (paint_dc: WEL_PAINT_DC; invalid_rect: WEL_RECT)
-			-- Draw a centered text
+			-- Centar el texto
 		do
-			paint_dc.draw_centered_text ("Hola mundo en eiffel!",
+			paint_dc.draw_centered_text ("Hola Mundo en Eiffel!",
 				client_rect)
 		end
 
 	class_background: WEL_WHITE_BRUSH
-			-- White background
+			-- Fondo Blanco
 		once
 			create Result.make
 		end
-
-note
-	copyright:	"Copyright (c) 1984-2006, Eiffel Software and others"
-	license:	"Eiffel Forum License v2 (see http://www.eiffel.com/licensing/forum.txt)"
-	source: "[
-			 Eiffel Software
-			 356 Storke Road, Goleta, CA 93117 USA
-			 Telephone 805-685-1006, Fax 805-685-6869
-			 Website http://www.eiffel.com
-			 Customer support http://support.eiffel.com
-		]"
 
 
 end -- class MAIN_WINDOW
